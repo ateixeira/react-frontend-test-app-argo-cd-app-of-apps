@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - image: 495168408567.dkr.ecr.eu-central-1.amazonaws.com/frontend:latest
+        name: frontend
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: '50Mi'
+            cpu: '50m'
+          limits:
+            memory: '50Mi'
+            cpu: '50m'
+        securityContext:
+          privileged: false
+          readOnlyRootFilesystem: false
+          allowPrivilegeEscalation: false
