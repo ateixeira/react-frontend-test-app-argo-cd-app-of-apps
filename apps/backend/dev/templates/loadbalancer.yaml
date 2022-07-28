@@ -8,5 +8,5 @@ spec:
   type: LoadBalancer
   ports:
    -  protocol: TCP
-      port: 7000
+      port: 7001
       
