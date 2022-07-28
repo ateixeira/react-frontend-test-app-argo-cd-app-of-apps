@@ -17,7 +17,7 @@ spec:
       - image: 495168408567.dkr.ecr.eu-central-1.amazonaws.com/backend:latest
         name: backend
         ports:
-        - containerPort: 80
+        - containerPort: 7000
         resources:
           requests:
             memory: '50Mi'
