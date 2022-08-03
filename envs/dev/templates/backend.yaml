@@ -16,7 +16,7 @@ spec:
     path: apps/backend/dev
     helm:
       valueFiles:
-      - "secrets.yaml"
+      - secrets://secrets.yaml
       parameters:
       - name: spec.ingress.host
         value: {{ .Values.spec.ingress.host }}
