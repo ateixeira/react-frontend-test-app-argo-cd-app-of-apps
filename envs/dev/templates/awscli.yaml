@@ -15,8 +15,6 @@ spec:
     targetRevision: {{ .Values.spec.source.targetRevision }}
     path: apps/awscli/dev
     helm:
-      valueFiles:
-        - secrets://secrets.yaml
       parameters:
       - name: spec.ingress.host
         value: {{ .Values.spec.ingress.host }}
