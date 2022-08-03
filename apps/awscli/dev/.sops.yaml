@@ -1,0 +1,5 @@
+creation_rules:
+    - path_regex: .*/dev/.*
+      kms: arn:aws:kms:eu-central-1:495168408567:key/ae1e89fb-ea86-48b3-a43d-b646c922b087
+
+    - kms: arn:aws:kms:eu-central-1:495168408567:key/ae1e89fb-ea86-48b3-a43d-b646c922b087
