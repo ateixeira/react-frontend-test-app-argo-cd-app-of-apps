@@ -17,6 +17,12 @@ spec:
       containers:
       - image: 495168408567.dkr.ecr.eu-central-1.amazonaws.com/backend:latest
         name: backend
+        env:
+          - name: api-key
+            valueFrom:
+              secretKeyRef:
+                name: apikey
+                key: apikey
         ports:
         - containerPort: 7000
         resources:
