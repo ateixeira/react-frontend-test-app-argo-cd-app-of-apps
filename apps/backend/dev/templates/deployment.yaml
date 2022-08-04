@@ -18,7 +18,7 @@ spec:
       - image: 495168408567.dkr.ecr.eu-central-1.amazonaws.com/backend:latest
         name: backend
         env:
-          - name: api-key
+          - name: API_KEY
             valueFrom:
               secretKeyRef:
                 name: apikey
